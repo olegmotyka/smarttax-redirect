@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plaid OAuth Redirect</title>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const oauthStateId = params.get("oauth_state_id");
+      const deepLink = `mycoolbankapp://oauth?oauth_state_id=${oauthStateId}`;
+      window.location.href = deepLink;
+    </script>
+  </head>
+  <body>
+    Redirecting to app...
+  </body>
+</html>
